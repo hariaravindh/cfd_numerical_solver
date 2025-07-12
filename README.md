@@ -28,7 +28,7 @@ All methods are benchmarked against the **analytical solution** for six test cas
 
 ---
 
-##  Governing Equation**Governing equation:**
+##  Governing Equation
 
 <p align="center">
 ∂T/∂t = α ∂²T/∂x²
