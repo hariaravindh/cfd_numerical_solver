@@ -90,11 +90,9 @@ project/
 │   ├── case_3.py
 │   ├── case_4.py
 │   └── case_5&6.py
-│
-└── docs/
 │   
 ├── LICENSE
-├── README.md
+└──README.md
 
 ```
 
