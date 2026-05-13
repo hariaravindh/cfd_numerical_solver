@@ -1,46 +1,41 @@
 # Numerical Investigation of the 1D Transient Heat Conduction Equation
 
-Finite-difference implementation and comparative numerical study of the transient 1D heat equation using Python, NumPy and Matplotlib.
+Comparative finite-difference study of the transient 1D heat equation using Python, NumPy and Matplotlib.
 
-The repository investigates the numerical behavior, stability characteristics and solution accuracy of three classical finite-difference schemes through comparison with the analytical solution.
+The repository investigates numerical stability, transient diffusion behavior and solution accuracy across multiple finite-difference schemes through comparison with the analytical solution.
 
 ---
 
 ## Governing Equation
-
-Transient heat conduction is governed by:
 
 ```text
 ∂T/∂t = α ∂²T/∂x²
 ```
 
 where:
-
 - `T(x,t)` → temperature distribution
 - `α = 0.02 m²/hr` → thermal diffusivity
 
+Initial condition:
+- triangular temperature profile
+- `T = 0 K` at `x = 0` and `x = 1 m`
+- `T = 100 K` at `x = 0.5 m`
 
-### Initial Condition
-Triangular temperature profile:
-- \(T = 0 \; K\) at \(x = 0\)
-- \(T = 100 \; K\) at \(x = 0.5 \; m\)
-- \(T = 0 \; K\) at \(x = 1 \; m\)
-
-### Boundary Conditions
-\[
-T(0,t) = T(1,t) = 0
-\]
+Boundary condition:
+- `T(0,t) = T(1,t) = 0 K`
 
 ---
 
 ## Numerical Methods
 
+The following finite-difference schemes are implemented and compared:
+
 - **Explicit FTCS**
-  - forward-time centered-space discretization
+  - forward-time centered-space formulation
   - conditionally stable
 
 - **Implicit Laasonen**
-  - tridiagonal implicit formulation
+  - implicit tridiagonal formulation
   - unconditionally stable
 
 - **Crank–Nicolson**
@@ -58,10 +53,10 @@ All numerical schemes are benchmarked against the analytical solution for multip
 
 Current investigations include:
 - timestep sensitivity
-- stability behavior
+- numerical stability behavior
 - transient diffusion response
+- explicit scheme instability
 - comparative scheme accuracy
-- numerical diffusion effects
 
 ---
 
@@ -73,6 +68,7 @@ project/
 ├── implicit_laasonen/
 ├── crank_nicolson/
 ├── analytical_solution/
+├── comparison_studies/
 ├── plots/
 └── results/
 ```
@@ -83,18 +79,15 @@ project/
 
 - restricted to one-dimensional conduction
 - constant thermal diffusivity assumption
-- no convergence study implemented yet
 - no multidimensional extension
+- no adaptive meshing
+- convergence study not yet implemented
 
 ---
 
-## ## Engineering Relevance
+## Engineering Relevance
 
-Transient diffusion problems provide foundational understanding for:
-- PDE discretization
-- numerical stability analysis
-- scientific computing workflows
-- broader CFD and thermal simulation methodologies
+This study investigates foundational numerical behaviors that appear throughout computational heat transfer and broader PDE-based simulation methods.
 
 ---
 
@@ -112,6 +105,4 @@ Transient diffusion problems provide foundational understanding for:
 
 ---
 
-## License
-
-MIT License
+![License: MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)
