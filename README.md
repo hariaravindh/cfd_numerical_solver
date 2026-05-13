@@ -64,13 +64,38 @@ Current investigations include:
 
 ```text
 project/
-├── explicit_ftcs/
-├── implicit_laasonen/
-├── crank_nicolson/
-├── analytical_solution/
-├── comparison_studies/
+│
+├── core/
+│   ├── analytical_solution.py
+│   └── intial_comditions.py
+│
 ├── plots/
-└── results/
+│   ├── test_case_1.png
+│   ├── test_case_2.png
+│   ├── test_case_3.png
+│   ├── test_case_4.png
+│   ├── test_case_5.png
+│   ├── test_case_6.1.png
+│   ├── test_case_6.2.png
+│   └── test_case_6.png
+│
+├── solvers/
+│   ├── crank_nicolson.py
+│   ├── explicit_ftcs.py
+│   └── implicit_laasonen.py
+│
+├── studies/
+│   ├── case_1.py
+│   ├── case_2.py
+│   ├── case_3.py
+│   ├── case_4.py
+│   └── case_5&6.py
+│
+└── docs/
+│   
+├── LICENSE
+├── README.md
+
 ```
 
 ---
